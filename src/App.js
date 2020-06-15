@@ -1,6 +1,7 @@
 import React from 'react';
 import AddTodo from './components/AddTodo';
 import TodoList from './components/TodoList';
+import VisibilityFilter from './components/VisibilityFilter';
 import "./style.css";
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <div>
       <h1>Todo List</h1>
       <AddTodo />
-      <TodoList/>
+      <TodoList />
+      <VisibilityFilter />
     </div>
   );
 }

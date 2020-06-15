@@ -4,26 +4,19 @@ import cx from "classnames";
 import { connect } from 'react-redux';
 
 class OtherTodo extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      todo: props.todo
-    }
-  }
-
   render() {
     return <li
       className="todo-item"
       onClick={() => {
-        this.props.toggleTodo(this.state.todo.id)
+        this.props.toggleTodo(this.props.todo.id)
       }}>
         <span
           className={cx(
             "todo-item__text",
-            this.state.todo && this.state.todo.completed && "todo-item__text--completed"
+            this.props.todo && this.props.todo.completed && "todo-item__text--completed"
           )}
         >
-          {this.state.todo.content}
+          {this.props.todo.content}
         </span>
       </li>
   }
